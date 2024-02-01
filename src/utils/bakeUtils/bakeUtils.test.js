@@ -7,7 +7,6 @@ jest.mock('./bakeUtils', () => {
     __esModule: true,
     ...originalModule,
     default: jest.fn().mockImplementation(() => {
-      console.log('Mocking bakeAllCakes()')
       return 'Chocolate Pudding and Matcha Roll are all baked.'
     }),
   };

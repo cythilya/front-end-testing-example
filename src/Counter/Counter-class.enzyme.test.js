@@ -11,13 +11,17 @@ describe('Counter component', () => {
 
   test('increments the counter value on button click', () => {
     const incrementButton = wrapper.find('[data-test-id="increment-button"]');
+
     incrementButton.simulate('click');
+
     expect(wrapper.state('count')).toEqual(1);
   });
 
   test('decrements the counter value on button click', () => {
     const decrementButton = wrapper.find('[data-test-id="decrement-button"]');
+
     decrementButton.simulate('click');
+
     expect(wrapper.state('count')).toEqual(-1);
   });
 });
