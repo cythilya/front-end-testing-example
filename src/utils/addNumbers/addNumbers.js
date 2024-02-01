@@ -1,3 +1,3 @@
-const addNumbers = (su, ad) => Number((su + ad).toFixed(1));
+const addNumbers = (a, b) => Number((a + b).toFixed(1));
 
 module.exports = addNumbers;

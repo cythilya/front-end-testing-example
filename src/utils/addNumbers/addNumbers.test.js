@@ -1,6 +1,6 @@
 const addNumbers = require('./addNumbers');
 
-test('adds 0.1 and 0.2 to equal 0.3', () => {
+test('should return 0.3 when 0.1 + 0.2', () => {
   expect(addNumbers(0.1, 0.2)).toBe(0.3);
 });
 
