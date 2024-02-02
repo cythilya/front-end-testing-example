@@ -7,19 +7,23 @@ jest.mock('./bakeUtils', () => {
     __esModule: true,
     ...originalModule,
     default: jest.fn().mockImplementation(() => {
-      return 'Chocolate Pudding and Matcha Roll are all baked.'
+      return 'Chocolate Pudding and Matcha Roll are all baked.';
     }),
   };
 });
 
 describe('bakeUtils', () => {
-  it('bakeAllCakes: should bake Chocolate Pudding and Matcha Roll', () => {
-    expect(bakeAllCakes()).toBe(
-      'Chocolate Pudding and Matcha Roll are all baked.'
-    );
+  describe('bakeAllCakes', () => {
+    it('should bake Chocolate Pudding and Matcha Roll', () => {
+      expect(bakeAllCakes()).toBe(
+        'Chocolate Pudding and Matcha Roll are all baked.'
+      );
+    });
   });
 
-  it('bakeMatchaRoll: should bake Matcha Roll', () => {
-    expect(bakeMatchaRoll()).toBe('Matcha Roll is baked.');
+  describe('bakeMatchaRoll', () => {
+    it('should bake Matcha Roll', () => {
+      expect(bakeMatchaRoll()).toBe('Matcha Roll is baked.');
+    });
   });
 });
