@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ImageItem from './ImageItem';
 
-const ImageList = (data) => {
+const ImageList = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -17,16 +17,17 @@ const ImageList = (data) => {
     fetchData();
   }, []);
 
-  return (
-    <>
-      {!images.length && (
-        <div data-test-id="no-data-prompt">No data to display.</div>
-      )}
-      {images.map(({ id, title, images }) => (
-        <ImageItem key={id} title={title} image={images[0]} />
-      ))}
-    </>
-  );
+  const renderImages = () => {
+    return images.map(({ id, title, images }) => (
+      <ImageItem key={id} title={title} image={images[0]} />
+    ));
+  };
+
+  const renderNoDataPrompt = () => {
+    return <div data-test-id="no-data-prompt">No data to display.</div>;
+  };
+
+  return <>{!!images.length ? renderImages() : renderNoDataPrompt()}</>;
 };
 
 export default ImageList;

@@ -4,9 +4,7 @@ import Counter from './Counter';
 
 describe('Counter component', () => {
   let counter;
-  const renderCounter = () => {
-    return <Counter />;
-  };
+  const renderCounter = () => <Counter />;
 
   beforeEach(() => {
     counter = render(renderCounter());

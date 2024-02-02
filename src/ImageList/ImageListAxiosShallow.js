@@ -1,17 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ImageItem from './ImageItem';
 
-const ImageList = () => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://dummyjson.com/products');
-      const data = await response.json();
-      setImages(data.products);
-    }
-    fetchData();
-  }, []);
+const ImageList = (data) => {
+  const [images, setImages] = useState(data.products);
 
   const renderImages = () => {
     return images.map(({ id, title, images }) => (

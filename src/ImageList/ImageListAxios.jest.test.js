@@ -11,10 +11,8 @@ describe('ImageList', () => {
     const mockedData = { products: [] };
     axios.get.mockResolvedValue({ data: mockedData });
 
-    // const wrapper = await act(async () => renderer.render(<ImageList />));
-    // expect(wrapper).toMatchSnapshot();
-
     const { getByTestId } = await act(async () => render(<ImageList />));
+
     expect(getByTestId('no-data-prompt')).toBeInTheDocument();
   });
 
@@ -34,12 +32,10 @@ describe('ImageList', () => {
         },
       ],
     };
-
     axios.get.mockResolvedValue({ data: mockedData });
-    // const wrapper = await act(async () => renderer.render(<ImageList />));
-    // expect(wrapper).toMatchSnapshot();
 
     const { getAllByTestId } = await act(async () => render(<ImageList />));
+
     expect(getAllByTestId('image-item-title')).toHaveLength(2);
   });
 });
