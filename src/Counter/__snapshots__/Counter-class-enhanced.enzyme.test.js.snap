@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component should mount component correctly 1`] = `
+<Counter>
+  <CounterValue
+    count={0}
+  >
+    <p
+      data-test-id="counter-value"
+    >
+      Count: 
+      0
+    </p>
+  </CounterValue>
+  <IncrementButton
+    onClick={[Function]}
+  >
+    <button
+      data-test-id="decrement-button"
+      onClick={[Function]}
+    >
+      -
+    </button>
+  </IncrementButton>
+  <IncrementButton
+    onClick={[Function]}
+  >
+    <button
+      data-test-id="increment-button"
+      onClick={[Function]}
+    >
+      +
+    </button>
+  </IncrementButton>
+</Counter>
+`;
+
+exports[`Counter component should shallow render component correctly 1`] = `
+<Fragment>
+  <CounterValue
+    count={0}
+  />
+  <IncrementButton
+    onClick={[Function]}
+  />
+  <IncrementButton
+    onClick={[Function]}
+  />
+</Fragment>
+`;
