@@ -18,16 +18,20 @@ const ImageList = () => {
   }, []);
 
   const renderImages = () => {
-    return images.map(({ id, title, images }) => (
-      <ImageItem key={id} title={title} image={images[0]} />
-    ));
+    return images.map(({ id, title, images }) => {
+      return <ImageItem key={id} title={title} image={images[0]} />;
+    });
   };
 
-  const renderNoDataPrompt = () => {
-    return <div data-test-id="no-data-prompt">No data to display.</div>;
-  };
-
-  return <>{!!images.length ? renderImages() : renderNoDataPrompt()}</>;
+  return (
+    <>
+      {images.length !== 0 ? (
+        renderImages()
+      ) : (
+        <div data-test-id="no-data-prompt">No data to display.</div>
+      )}
+    </>
+  );
 };
 
 export default ImageList;
