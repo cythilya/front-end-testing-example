@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageList should render correct image items when have data 1`] = `
+<React.Fragment>
+  <ImageItem
+    image="https://bit.ly/4228IT0"
+    title="打造高速網站，從網站指標開始！全方位提升使用者體驗與流量的關鍵"
+  />
+  <ImageItem
+    image="https://bit.ly/4b5nLPO"
+    title="島波海道。單車跳島之旅"
+  />
+</React.Fragment>
+`;
+
+exports[`ImageList should render no data prompt when no images 1`] = `
+<React.Fragment>
+  <div
+    data-test-id="no-data-prompt"
+  >
+    No data to display.
+  </div>
+</React.Fragment>
+`;
