@@ -8,11 +8,10 @@ exports[`Counter component should mount component correctly 1`] = `
     <p
       data-test-id="counter-value"
     >
-      Count: 
       0
     </p>
   </CounterValue>
-  <IncrementButton
+  <DecrementButton
     onClick={[Function]}
   >
     <button
@@ -21,7 +20,7 @@ exports[`Counter component should mount component correctly 1`] = `
     >
       -
     </button>
-  </IncrementButton>
+  </DecrementButton>
   <IncrementButton
     onClick={[Function]}
   >
@@ -40,7 +39,7 @@ exports[`Counter component should shallow render component correctly 1`] = `
   <CounterValue
     count={0}
   />
-  <IncrementButton
+  <DecrementButton
     onClick={[Function]}
   />
   <IncrementButton

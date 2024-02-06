@@ -1,4 +1,4 @@
-const IncrementButton = ({ onClick }) => {
+const DecrementButton = ({ onClick }) => {
   return (
     <button data-test-id="decrement-button" onClick={onClick}>
       -
@@ -6,4 +6,4 @@ const IncrementButton = ({ onClick }) => {
   );
 };
 
-export default IncrementButton;
+export default DecrementButton;

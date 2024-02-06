@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component full rendering should get snapshot correctly 1`] = `
+<div>
+  <p
+    data-test-id="counter-value"
+  >
+    0
+  </p>
+  <button
+    data-test-id="decrement-button"
+  >
+    -
+  </button>
+  <button
+    data-test-id="increment-button"
+  >
+    +
+  </button>
+</div>
+`;
+
+exports[`Counter component shallowing rendering should get snapshot correctly 1`] = `
+<React.Fragment>
+  <CounterValue
+    count={0}
+  />
+  <DecrementButton
+    onClick={[Function]}
+  />
+  <IncrementButton
+    onClick={[Function]}
+  />
+</React.Fragment>
+`;
