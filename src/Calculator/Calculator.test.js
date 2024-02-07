@@ -2,7 +2,6 @@ import { fireEvent, screen } from '@testing-library/react';
 import { render } from '@testing-library/react';
 import { act } from 'react-test-renderer';
 import Calculator from './Calculator';
-import userEvent from '@testing-library/user-event';
 
 describe('Calculator', () => {
   test('should get 8 when add 5 and 3', () => {
