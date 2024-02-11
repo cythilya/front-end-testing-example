@@ -4,6 +4,6 @@ describe('Hello', () => {
   it('should show image title correctly', () => {
     cy.mount(<Hello />);
 
-    cy.get('.text').should('have.text', '這是測試文字');
+    cy.get('[data-test-id="text"]').should('have.text', '這是測試文字');
   });
 });

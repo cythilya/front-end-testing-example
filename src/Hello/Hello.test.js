@@ -19,4 +19,10 @@ describe('Hello', () => {
     // expect(textElement).toBe('這是測試文字');
     expect(textContent).toBe('這是測試文字');
   });
+
+  it('should render the correct content 3', () => {
+    const { getByTestId } = render(<Hello />);
+
+    expect(getByTestId('text').textContent).toBe('這是測試文字');
+  });
 });
