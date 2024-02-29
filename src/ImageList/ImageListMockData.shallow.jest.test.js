@@ -8,7 +8,7 @@ describe('ImageList', () => {
     const renderer = createRenderer();
     const mockedData = { products: [] };
 
-    const wrapper = await act(async () => renderer.render(<ImageList data={mockedData}/>));
+    const wrapper = renderer.render(<ImageList data={mockedData}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -31,7 +31,7 @@ describe('ImageList', () => {
       ],
     };
 
-    const wrapper = await act(async () => renderer.render(<ImageList data={mockedData} />));
+    const wrapper = renderer.render(<ImageList data={mockedData}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
