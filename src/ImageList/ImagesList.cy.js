@@ -1,4 +1,4 @@
-import ImageItem from './ImageItem';
+import ImageList from './ImageList';
 
 describe('ImageList', () => {
   it('should render no data prompt when no images', () => {
@@ -34,5 +34,7 @@ describe('ImageList', () => {
     cy.mount(<ImageList />);
 
     cy.get('[data-test-id="image-item-title"]').should('have.length', 2);
+    cy.contains('打造高速網站');
+    cy.contains('島波海道');
   });
 });
