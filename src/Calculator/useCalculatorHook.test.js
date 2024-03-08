@@ -21,7 +21,7 @@ describe('useCalculatorHook', () => {
           <select data-test-id="operator" onChange={handleOperatorChange} value={operator}>
             <option value="+">+</option>
           </select>
-          <input data-test-id="number2" onChange={handleNum2Change} value={num1} />
+          <input data-test-id="number2" onChange={handleNum2Change} value={num2} />
           <button data-test-id="calculate" onClick={calculate}>Calculate</button>
           <div data-test-id="result">{result}</div>
         </div>
