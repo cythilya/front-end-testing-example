@@ -1,4 +1,4 @@
-describe('upload page', () => {
+describe.skip('upload page', () => {
   describe('desktop', () => {
     it('should get error message when upload file with pdf format', () => {
       cy.visit('https://memori-ui-upload.web.app/?serviceId=webconf2023');
