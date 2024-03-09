@@ -22,6 +22,6 @@ describe('Calculator', () => {
 
     // 驗證結果
     const result = screen.getByTestId('result');
-    expect(result.textContent).toBe('Result: 15');
+    expect(result.textContent).toBe('15');
   });
 });

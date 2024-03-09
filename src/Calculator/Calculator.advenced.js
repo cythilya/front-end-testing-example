@@ -6,9 +6,16 @@ const Calculator = () => {
   const [operator, setOperator] = useState('+');
   const [result, setResult] = useState('');
 
-  const handleNum1Change = (e) => setNum1(e.target.value);
-  const handleNum2Change = (e) => setNum2(e.target.value);
-  const handleOperatorChange = (e) => setOperator(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'num1') {
+      setNum1(value);
+    } else if (name === 'num2') {
+      setNum2(value);
+    } else if (name === 'operator') {
+      setOperator(value);
+    }
+  };
 
   const calculateResult = () => {
     const parsedNum1 = parseFloat(num1);
@@ -34,18 +41,35 @@ const Calculator = () => {
 
   return (
     <div>
-      <input type="number" value={num1} onChange={handleNum1Change} data-test-id="number1" />
-      <select value={operator} onChange={handleOperatorChange} data-test-id="operator">
+      <input
+        data-test-id="number1"
+        type="number"
+        name="num1"
+        value={num1}
+        onChange={handleChange}
+      />
+      <select
+        data-test-id="operator"
+        name="operator"
+        value={operator}
+        onChange={handleChange}
+      >
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
         <option value="/">/</option>
       </select>
-      <input type="number" value={num2} onChange={handleNum2Change} data-test-id="number2" />
+      <input
+        data-test-id="number2"
+        type="number"
+        name="num2"
+        value={num2}
+        onChange={handleChange}
+      />
       <button onClick={calculateResult}>Calculate</button>
-      <div data-test-id="result">Result: {result}</div>
+      <div data-test-id="result">{result}</div>
     </div>
   );
-}
+};
 
 export default Calculator;

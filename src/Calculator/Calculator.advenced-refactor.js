@@ -38,7 +38,7 @@ const Calculator = () => {
         onChange={handleNum2Change}
       />
       <button onClick={calculateResult}>Calculate</button>
-      <div data-test-id="result">Result: {result}</div>
+      <div data-test-id="result">{result}</div>
     </div>
   );
 };
