@@ -1,31 +1,18 @@
-import { useState } from 'react';
 import useCalculatorHook from './useCalculatorHook';
 
 const Calculator = () => {
-  const {
-    calculate,
-    handleNum1Change,
-    handleNum2Change,
-    handleOperatorChange,
-    num1,
-    num2,
-    operator,
-    result,
-  } = useCalculatorHook();
+  const { calculate, handleChange, num1, num2, operator, result } =
+    useCalculatorHook();
 
   return (
-    <div>
+    <>
       <input
         data-test-id="number1"
         type="number"
         value={num1}
-        onChange={handleNum1Change}
+        onChange={handleChange}
       />
-      <select
-        data-test-id="operator"
-        value={operator}
-        onChange={handleOperatorChange}
-      >
+      <select data-test-id="operator" value={operator} onChange={handleChange}>
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
@@ -35,11 +22,11 @@ const Calculator = () => {
         data-test-id="number2"
         type="number"
         value={num2}
-        onChange={handleNum2Change}
+        onChange={handleChange}
       />
-      <button onClick={calculateResult}>Calculate</button>
+      <button onClick={calculate}>Calculate</button>
       <div data-test-id="result">{result}</div>
-    </div>
+    </>
   );
 };
 

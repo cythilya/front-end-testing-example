@@ -1,4 +1,4 @@
-import { render, fireEvent, screen, act } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import useCalculatorHook from './useCalculatorHook';
 
 describe('useCalculatorHook', () => {
