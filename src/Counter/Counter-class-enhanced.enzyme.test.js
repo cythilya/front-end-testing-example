@@ -16,7 +16,7 @@ describe('Counter component', () => {
 
     wrapper.instance().increment();
 
-    expect(wrapper.state('count')).toEqual(1);
+    expect(wrapper.state('count')).toBe(1);
   });
 
   // mount
@@ -32,6 +32,6 @@ describe('Counter component', () => {
     const incrementButton = wrapper.find('[data-test-id="increment-button"]');
     incrementButton.simulate('click');
 
-    expect(wrapper.state('count')).toEqual(1);
+    expect(wrapper.state('count')).toBe(1);
   });
 });

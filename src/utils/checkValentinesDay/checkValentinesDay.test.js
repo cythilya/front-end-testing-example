@@ -8,11 +8,11 @@ jest.mock('./getToday', () => ({
 describe('checkValentinesDay', () => {
   it('2/12 should not be Valentines Day', () => {
     getToday.mockReturnValue('2/12');
-    expect(checkValentinesDay()).toEqual('今天不是情人節');
+    expect(checkValentinesDay()).toBe('今天不是情人節');
   });
 
   it('2/14 should be Valentines Day', () => {
     getToday.mockReturnValue('2/14');
-    expect(checkValentinesDay()).toEqual('情人節快樂');
+    expect(checkValentinesDay()).toBe('情人節快樂');
   });
 });

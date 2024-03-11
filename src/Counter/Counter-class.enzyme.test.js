@@ -14,7 +14,7 @@ describe('Counter component', () => {
 
     incrementButton.simulate('click');
 
-    expect(wrapper.state('count')).toEqual(1);
+    expect(wrapper.state('count')).toBe(1);
   });
 
   test('decrements the counter value on button click', () => {
@@ -22,6 +22,6 @@ describe('Counter component', () => {
 
     decrementButton.simulate('click');
 
-    expect(wrapper.state('count')).toEqual(-1);
+    expect(wrapper.state('count')).toBe(-1);
   });
 });
