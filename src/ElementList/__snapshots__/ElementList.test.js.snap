@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ElementList should display the elements correctly 1`] = `
+<div
+  data-test-id="visible-element"
+  style="display: block;"
+>
+  這是顯示的元素
+</div>
+`;
+
+exports[`ElementList should display the elements correctly 2`] = `
+<div
+  data-test-id="invisible-element"
+  style="display: none;"
+>
+  這是隱藏的元素
+</div>
+`;

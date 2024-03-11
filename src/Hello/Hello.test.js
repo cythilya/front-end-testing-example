@@ -27,9 +27,10 @@ describe('Hello', () => {
   });
 
   it('should render the correct content 4', () => {
-    const { queryAllByTestId, getAllByTestId } = render(<Hello />);
+    const { queryAllByTestId } = render(<Hello />);
+    // const { queryAllByTestId, getAllByTestId } = render(<Hello />);
 
     // expect(getAllByTestId('text-1').length).toBe(0)
-    expect(queryAllByTestId('text-2').length).toBe(0)
+    expect(queryAllByTestId('text-2').length).toBe(0);
   });
 });
