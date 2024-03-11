@@ -66,7 +66,9 @@ const Calculator = () => {
         value={num2}
         onChange={handleChange}
       />
-      <button onClick={calculateResult}>Calculate</button>
+      <button data-test-id="calculate" onClick={calculateResult}>
+        Calculate
+      </button>
       <div data-test-id="result">{result}</div>
     </div>
   );

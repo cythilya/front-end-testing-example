@@ -10,7 +10,7 @@ afterAll(() => {
   jest.useRealTimers();
 });
 
-it.skip('should get 1 when click + button', () => {
+it('should get 1 when click + button', () => {
   const { getByTestId } = render(<Count />);
   fireEvent.click(getByTestId('button-up'));
 
@@ -18,7 +18,7 @@ it.skip('should get 1 when click + button', () => {
     jest.advanceTimersByTime(500);
   });
 
-  expect(getByTestId('counter').textContent).toBe('1');
+  expect(getByTestId('counter')).toHaveTextContent('1');
 });
 
 it('should get 1 when click + button', async () => {
@@ -27,7 +27,7 @@ it('should get 1 when click + button', async () => {
   fireEvent.click(getByTestId('button-up'));
 
   await waitFor(() => {
-    expect(getByTestId('counter').textContent).toBe('1');
+    expect(getByTestId('counter')).toHaveTextContent('1');
   });
 });
 
@@ -38,7 +38,7 @@ it.skip('should get 1 when click + button', () => {
     fireEvent.click(getByTestId('button-up'));
   });
 
-  expect(getByTestId('counter').textContent).toBe('1');
+  expect(getByTestId('counter')).toHaveTextContent('1');
 });
 
 it.skip('should get 1 when click + button', () => {
@@ -46,7 +46,7 @@ it.skip('should get 1 when click + button', () => {
 
   fireEvent.click(getByTestId('button-up'));
 
-  expect(getByTestId('counter').textContent).toBe('1');
+  expect(getByTestId('counter')).toHaveTextContent('1');
 });
 
 it('should get -1 when click - button', () => {
@@ -56,5 +56,5 @@ it('should get -1 when click - button', () => {
     fireEvent.click(getByTestId('button-down'));
   });
 
-  expect(getByTestId('counter').textContent).toBe('-1');
+  expect(getByTestId('counter')).toHaveTextContent('-1');
 });

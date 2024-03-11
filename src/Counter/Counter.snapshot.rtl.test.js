@@ -45,7 +45,7 @@ describe('Counter component', () => {
 
       fireEvent.click(getByTestId('increment-button'));
 
-      expect(getByTestId('counter-value').textContent).toBe('1');
+      expect(getByTestId('counter-value')).toHaveTextContent('1');
     });
   });
 });

@@ -19,7 +19,7 @@ describe('Counter component', () => {
 
     fireEvent.click(getByTestId('increment-button'));
 
-    expect(getByTestId('counter-value').textContent).toBe('1');
+    expect(getByTestId('counter-value')).toHaveTextContent('1');
   });
 
   it('should get -1 when click the decrement button', () => {
@@ -27,6 +27,6 @@ describe('Counter component', () => {
 
     fireEvent.click(getByTestId('decrement-button'));
 
-    expect(getByTestId('counter-value').textContent).toBe('-1');
+    expect(getByTestId('counter-value')).toHaveTextContent('-1');
   });
 });
