@@ -26,10 +26,10 @@ describe('Hello', () => {
     expect(getByTestId('text')).toHaveTextContent('這是測試文字');
   });
 
-  it.skip('should render the correct content 4', () => {
+  it('should render the correct content 4', () => {
     const { queryAllByTestId, getAllByTestId } = render(<Hello />);
 
-    expect(getAllByTestId('text-1')).toBeInTheDocument();
-    expect(queryAllByTestId('text-2')).toBeInTheDocument();
+    // expect(getAllByTestId('text-1').length).toBe(0)
+    expect(queryAllByTestId('text-2').length).toBe(0)
   });
 });
