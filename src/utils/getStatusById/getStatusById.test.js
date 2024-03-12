@@ -1,6 +1,7 @@
 import getStatusById from './getStatusById';
+import filterList from './filterList';
 
-const MOCK_LIST = [
+const mockList = [
   { id: 1, status: 'active' },
   { id: 2, status: 'inactive' },
   { id: 3, status: 'pending' },
@@ -11,19 +12,27 @@ const MOCK_LIST = [
 // });
 
 jest.mock('./filterList', () => {
-  return jest.fn().mockImplementation((list, id) => MOCK_LIST.filter((item) => item.id === id)[0]);
+  return jest.fn().mockImplementation((list, id) => mockList.filter((item) => item.id === id)[0]);
 });
 
 describe('getStatusById', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should return active status when get element id 1', () => {
     const id = 1;
-    const result = getStatusById(MOCK_LIST, id);
+    const result = getStatusById(mockList, id);
+
+    expect(filterList).toHaveBeenCalledWith(mockList, id);
     expect(result).toBe('active');
   });
 
   it('should return inactive status when get element id 2', () => {
     const id = 2;
-    const result = getStatusById(MOCK_LIST, id);
+    const result = getStatusById(mockList, id);
+
+    expect(filterList).toHaveBeenCalledWith(mockList, id);
     expect(result).toBe('inactive');
   });
 });
