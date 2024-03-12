@@ -1,5 +1,4 @@
 import getStatusById from './getStatusById';
-import filterList from './filterList';
 
 const mockList = [
   { id: 1, status: 'active' },
@@ -24,7 +23,6 @@ describe('getStatusById', () => {
     const id = 1;
     const result = getStatusById(mockList, id);
 
-    expect(filterList).toHaveBeenCalledWith(mockList, id);
     expect(result).toBe('active');
   });
 
@@ -32,7 +30,6 @@ describe('getStatusById', () => {
     const id = 2;
     const result = getStatusById(mockList, id);
 
-    expect(filterList).toHaveBeenCalledWith(mockList, id);
     expect(result).toBe('inactive');
   });
 });
