@@ -1,0 +1,31 @@
+{
+  "total": 1,
+  "totalPassed": 0,
+  "totalFailed": 1,
+  "totalSuites": 1,
+  "suites": [
+    {
+      "name": "cythilya.cy.js",
+      "path": "cypress/e2e/cythilya.cy.js",
+      "tests": [
+        {
+          "status": "fail",
+          "name": "cythilya.cy-cythilya-about",
+          "percentage": 0.5750222254512637,
+          "failureThreshold": 0,
+          "specPath": "cypress/e2e/cythilya.cy.js",
+          "specFilename": "cythilya.cy.js",
+          "baselinePath": "cypress-image-diff-screenshots/baseline/cythilya.cy-cythilya-about.png",
+          "diffPath": "cypress-image-diff-screenshots/diff/cythilya.cy-cythilya-about.png",
+          "comparisonPath": "cypress-image-diff-screenshots/comparison/cythilya.cy-cythilya-about.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2024-03-16T22:53:10.267Z",
+  "endedAt": "2024-03-16T22:53:42.575Z",
+  "duration": 23100,
+  "browserName": "electron",
+  "browserVersion": "114.0.5735.289",
+  "cypressVersion": "13.6.4"
+}

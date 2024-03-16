@@ -19,3 +19,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// cypress/support/{scheme}.js, where {scheme} defaults to e2e
+const compareSnapshotCommand = require('cypress-image-diff-js/command');
+// for Cypress v12.17.3 and older
+// const compareSnapshotCommand = require('cypress-image-diff-js');
+compareSnapshotCommand();

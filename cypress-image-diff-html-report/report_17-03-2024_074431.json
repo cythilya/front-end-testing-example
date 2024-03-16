@@ -1,0 +1,48 @@
+{
+  "total": 2,
+  "totalPassed": 0,
+  "totalFailed": 2,
+  "totalSuites": 2,
+  "suites": [
+    {
+      "name": "cythilya.cy.js",
+      "path": "cypress/e2e/cythilya.cy.js",
+      "tests": [
+        {
+          "status": "fail",
+          "name": "cythilya.cy-cythilya-about",
+          "percentage": 0.5750222254512637,
+          "failureThreshold": 0,
+          "specPath": "cypress/e2e/cythilya.cy.js",
+          "specFilename": "cythilya.cy.js",
+          "baselinePath": "cypress-image-diff-screenshots/baseline/cythilya.cy-cythilya-about.png",
+          "diffPath": "cypress-image-diff-screenshots/diff/cythilya.cy-cythilya-about.png",
+          "comparisonPath": "cypress-image-diff-screenshots/comparison/cythilya.cy-cythilya-about.png"
+        }
+      ]
+    },
+    {
+      "name": "mixtini.cy.js",
+      "path": "cypress/e2e/mixtini.cy.js",
+      "tests": [
+        {
+          "status": "fail",
+          "name": "mixtini.cy-mixtini",
+          "percentage": 0.9538479840218659,
+          "failureThreshold": 0,
+          "specPath": "cypress/e2e/mixtini.cy.js",
+          "specFilename": "mixtini.cy.js",
+          "baselinePath": "cypress-image-diff-screenshots/baseline/mixtini.cy-mixtini.png",
+          "diffPath": "cypress-image-diff-screenshots/diff/mixtini.cy-mixtini.png",
+          "comparisonPath": "cypress-image-diff-screenshots/comparison/mixtini.cy-mixtini.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2024-03-16T23:44:31.026Z",
+  "endedAt": "2024-03-16T23:45:23.784Z",
+  "duration": 43214,
+  "browserName": "electron",
+  "browserVersion": "114.0.5735.289",
+  "cypressVersion": "13.6.4"
+}
