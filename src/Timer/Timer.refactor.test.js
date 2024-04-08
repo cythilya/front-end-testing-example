@@ -11,6 +11,12 @@ describe('Timer component', () => {
     jest.useRealTimers();
   });
 
+  const advanceTimersByTime = (time) => {
+    act(() => {
+      jest.advanceTimersByTime(time);
+    });
+  };
+
   describe('waitTime is provided with valid integer', () => {
     let timerComponent;
     const renderTimerComponent = (props) => render(<Timer {...props} />);
@@ -22,9 +28,7 @@ describe('Timer component', () => {
     it('should show remaining 2 seconds when after 1 second', () => {
       const { getByText } = timerComponent;
 
-      act(() => {
-        jest.advanceTimersByTime(1000);
-      });
+      advanceTimersByTime(1000);
 
       expect(getByText('Remaining seconds: 2')).toBeInTheDocument();
     });
@@ -32,9 +36,7 @@ describe('Timer component', () => {
     it("should show Time's Up when after 3 seconds", () => {
       const { getByText } = timerComponent;
 
-      act(() => {
-        jest.advanceTimersByTime(3000);
-      });
+      advanceTimersByTime(3000);
 
       expect(getByText("Time's Up")).toBeInTheDocument();
     });

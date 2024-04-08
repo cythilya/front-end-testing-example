@@ -1,12 +1,19 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-const Timer = () => {
-  const [seconds, setSeconds] = useState(3);
+const timerTickInterval = 1000;
+
+const Timer = ({ waitTime = 3 }) => {
+  const [seconds, setSeconds] = useState(waitTime);
   const intervalIDRef = useRef(null);
+
   const startTimer = useCallback(() => {
+    if (waitTime <= 0) {
+      throw new Error('waitTime must be greater than 0.');
+    }
+
     intervalIDRef.current = setInterval(
       () => setSeconds((prev) => prev - 1),
-      1000
+      timerTickInterval
     );
   }, []);
 
@@ -21,7 +28,9 @@ const Timer = () => {
   }, []);
 
   useEffect(() => {
-    if (seconds === 0) stopTimer();
+    if (seconds === 0) {
+      stopTimer();
+    }
   }, [seconds]);
 
   return (
